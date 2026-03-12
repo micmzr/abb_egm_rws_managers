@@ -98,7 +98,12 @@ void initializeMotionData(MotionData& motion_data, const RobotControllerDescript
       // TCP robots:
       // - Six axes robots are supported by EGM.
       // - Seven axes robots are supported by EGM since RobotWare 6.09.
-      if(unit.axes_total() == 6)
+
+      if(unit.axes_total() == 4)
+      {
+        motion_unit.supported_by_egm = true;
+      }
+      else if(unit.axes_total() == 6)
       {
         motion_unit.supported_by_egm = true;
       }
