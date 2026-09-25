@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.9.1)
+cmake_minimum_required(VERSION 3.30)
 
 ########################################################################################################################
 # Metadata
@@ -133,7 +133,7 @@ target_link_libraries(${PROJECT_NAME} PUBLIC
   Threads::Threads
 )
 
-target_compile_features(${PROJECT_NAME} PRIVATE cxx_std_14)
+target_compile_features(${PROJECT_NAME} PRIVATE cxx_std_20)
 
 target_compile_definitions(${PROJECT_NAME} PRIVATE -D_USE_MATH_DEFINES)
 
