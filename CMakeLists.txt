@@ -41,6 +41,11 @@ find_package(abb_librws REQUIRED)
 #-----------------------------
 find_package(Threads REQUIRED)
 
+#########################
+## Boost C++ Libraries ##
+#########################
+find_package(Boost REQUIRED COMPONENTS thread)
+
 #-----------------------------
 # Google protocol buffers
 #-----------------------------
@@ -130,6 +135,7 @@ target_link_libraries(${PROJECT_NAME} PUBLIC
   abb_libegm::abb_libegm
   abb_librws::abb_librws
   protobuf::libprotobuf
+  Boost::thread
   Threads::Threads
 )
 
